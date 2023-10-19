@@ -2,20 +2,20 @@ var generateBtn = document.querySelector("#generate");
 
 
 function generatePassword() {
-  var lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
-  var upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var numericChars = "0123456789";
-  var specialChars = "!@#$%^&*()_+[]{}|;:,.<>?";
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numeric = "0123456789";
+  var special = "!@#$%^&*()_+[]{}|;:,.<>?";
 
   var password = "";
   var selectedChars = "";
 
   
-  var passwordLength = parseInt(prompt("Enter the length of the password (8-128 characters):"));
+  var passwordLength = parseInt(prompt("Enter length of the password (8-128 characters):"));
 
   
   if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
-    alert("Please enter a valid password length between 8 and 128 characters.");
+    alert("Enter password length between 8 and 128 characters.");
     return "";
   }
 
@@ -25,21 +25,21 @@ function generatePassword() {
   var includeSpecial = confirm("Include special characters?");
 
   if (!includeLowerCase && !includeUpperCase && !includeNumeric && !includeSpecial) {
-    alert("You must select at least one character type.");
+    alert("You must choose one character.");
     return "";
   }
 
   if (includeLowerCase) {
-    selectedChars += lowerCaseChars;
+    selectedChars += lowerCase;
   }
   if (includeUpperCase) {
-    selectedChars += upperCaseChars;
+    selectedChars += upperCase;
   }
   if (includeNumeric) {
-    selectedChars += numericChars;
+    selectedChars += numeric;
   }
   if (includeSpecial) {
-    selectedChars += specialChars;
+    selectedChars += special;
   }
 
   for (var i = 0; i < passwordLength; i++) {

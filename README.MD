@@ -20,6 +20,7 @@ i have read the read me and used the acceptance critera to complete the challeng
 ## Link
 
 You can view the webiste by the following link:  
+file:///C:/Users/uabdu/OneDrive/Desktop/Week-3-Coding-Javascript/index.html
 
 ## User Story 
 
@@ -28,3 +29,9 @@ This password will be a length of 8 to 128 characters.
 
 
 # Deployed Link
+
+
+
+## Screenshot of website 
+
+![Alt text](image.png)
